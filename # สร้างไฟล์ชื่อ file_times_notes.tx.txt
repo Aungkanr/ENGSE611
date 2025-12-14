@@ -1,0 +1,9 @@
+# สร้างไฟล์ชื่อ file_times_notes.txt
+echo "access - when the file was last accessed/read (a-time)." > file_times_notes.txt
+echo "modified - when the contents was last modified written (m-time)." >> file_times_notes.txt
+echo "change - denotes changes to files metadata like changing user permission (c-time)." >> file_times_notes.txt
+
+# ตรวจสอบเนื้อหาไฟล์
+cat file_times_notes.txt
+
+
