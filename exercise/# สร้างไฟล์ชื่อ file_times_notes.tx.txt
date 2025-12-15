@@ -6,4 +6,3 @@ echo "change - denotes changes to files metadata like changing user permission (
 # ตรวจสอบเนื้อหาไฟล์
 cat file_times_notes.txt
 
-
