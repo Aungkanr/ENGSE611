@@ -3,37 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examlab1</title>
+    <title>Document</title>
 </head>
 <body>
-    <form align = left id = "data">
-        <p><h2>สมัคร</h2></p>
-        <p>ง่ายและจ่ายเร็ว</p>
-    <label> ชื่อ:</label>
-    <input type="text" name="ชื่อ"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <label> นามสกุล:</label>
-    <input type="text" name="surename">
-    <br><br>
-    <label> หมายเลขโทรศัพท์มือถือหรืออีเมล</label>
-    <input type="tel" name="numbertelephon" input type="email" name="email">
-    <br><br>
-    <label> รหัสผ่านใหม่</label>
-    <input type="password" name="newpassword">
-    <br><br>
-    <label>วันเกิด</label>
-    <input type="date" name="" id="">
-    <br><br>
-    <label>เพศ</label>
-    <br>
-    <input type="radio" name="gender" value="female">หญิง
-    <input type="radio" name="gender" value="female">ชาย
-    <br><br>
-    <text name="" id="">เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และ นโยบาย<br>   
-        คุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสามารถเลือก
-        ไม่รับได้ในภายหลัง</text>
-    </form>
+ <table border="0" align="center" width="400">
+    <!-- แถวหัวข้อ + X -->
+    <tr>
+        <td align="left">
+            <h2>สมัคร</h2>
+            <p>ง่ายและเร็ว</p>
+        </td>
+        <td align="right" valign="top">
+            ⨉
+        </td>
+    </tr>
 
+    <tr>
+        <td colspan="2">
+            <hr>
+        </td>
+    </tr>
 
+    <!-- ฟอร์ม -->
+    <tr>
+        <td colspan="2">
+
+            <table border="0" width="100%">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="ชื่อ">
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="text" placeholder="นามสกุล">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><br>
+                        <input type="tel" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><br>
+                        <input type="password" placeholder="รหัสผ่านใหม่">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><br>
+                        วันเกิด<br>
+                        <select>
+                            <option>1</option><option>2</option><option>3</option>
+                            <option>4</option><option>5</option><option>6</option>
+                            <option>7</option><option>8</option><option>9</option>
+                            <option>10</option><option>11</option><option>12</option>
+                            <option>13</option><option>14</option><option>15</option>
+                            <option>16</option><option>17</option><option>18</option>
+                            <option>19</option><option>20</option><option>21</option>
+                            <option>22</option><option>23</option><option>24</option>
+                            <option>25</option><option>26</option><option>27</option>
+                            <option>28</option><option>29</option><option>30</option>
+                        </select>
+
+                        <select>
+                            <option>มกราคม</option><option>กุมภาพันธ์</option>
+                            <option>มีนาคม</option><option>เมษายน</option>
+                            <option>พฤษภาคม</option><option>มิถุนายน</option>
+                            <option>กรกฏาคม</option><option>สิงหาคม</option>
+                            <option>กันยายน</option><option>ตุลาคม</option>
+                            <option>พฤศจิกายน</option><option>ธันวาคม</option>
+                        </select>
+
+                        <select>
+                            <option>2014</option><option>2015</option><option>2016</option>
+                            <option>2017</option><option>2018</option><option>2019</option>
+                            <option>2020</option><option>2021</option><option>2022</option>
+                            <option>2023</option><option>2024</option><option>2025</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><br><br>
+                        เพศ<br><br>
+
+                        <table border="0" width="100%">
+                            <tr>
+                                <td width="50%">
+                                    <table border="1" width="100%">
+                                        <tr>
+                                            <td>
+                                                หญิง
+                                                <input type="radio" name="gender" value="female" align="right">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td width="50%">
+                                    <table border="1" width="100%">
+                                        <tr>
+                                            <td>
+                                                ชาย
+                                                <input type="radio" name="gender" value="male" align="right">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><br>
+                        เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และนโยบายคุกกี้ของเรา<br>
+                        คุณอาจได้รับการแจ้งเตือนทาง SMS และสามารถเลือกไม่รับได้ในภายหลัง
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><br>
+                        <button type="submit">สมัคร</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+
+</table>
 
 </body>
 </html>
