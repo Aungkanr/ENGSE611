@@ -4,57 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body align = center>
-    <header><h1>นาย อังคาร สกุลบุญดี</h1></header>
+    
+    <header>
+        <div id="datauserheader">
+        This is my first website
+        </div>
+        <h1>
+            นาย อังคาร สกุลบุญดี
+        </h1>
+    </header>
+
     <img src="kit.jpg" alt="me" width="350" height="350">
     <nav><!--คือส่วนชองเมนูนำทางไปยังส่วนต่างๆของเว็บไซต์-->
-       <p><h3><a href="#contact"> ไปยังส่วนติดต่อ</a></p></h3>
-       <p><h3><a href="#Data"> ไปยังข้อมูลผู้ใช้งาน</a></p></h3>
+
+       <h3><a href="#contact"> ไปยังส่วนติดต่อ</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Data"> ไปยังข้อมูลผู้ใช้งาน</a></h3>
+       
     </nav>
     </p>
-    <main align = left><h2>Home</h2></main>
-    <ul align = left>
-        <li>สิ่งที่ชอบทำตอนอยู่บ้าน</li>
+    <main align = left> 
+        
+        <p class="Homelet">Home</p>
+        <br>
+    <p class = " datauser " >
+        <li>สิ่งที่ชอบทำตอนอยู่บ้าน</li> 
+        <br>
         <li>ฟังเพลง</li>
+        <br>
         <li>นอน</li>
+        <br>
         <li>ดูหนัง</li>
+        <br>
         <li>เล่นเกม</li>
-    </ul>
+    </main>
     <form align = left id="Data">
-        <h2>ข้อมูลผู้ใช้</h2>
+        <br><br>
+        <p class="datauser">ข้อมูลผู้ใช้</p>
+        <br>
     <label>ชื่อ&nbsp;:&nbsp;</label>
     <input type="text" name="name">
   <br><br>
+  
     <label> date of brith &nbsp; </label>
         <input type="date" name = "date of brith" value="number">
     <br><br>
+
     <label>Email&nbsp;:&nbsp;</label>
         <input type="email" name="email">
+
     <br><br>
         <label>งานอดิเรก&nbsp;:</label>
         <input type="checkbox" name="hobby" value="read"> อ่านหนังสือ
         <input type="checkbox" name="hobby" value="sport"> กีฬา
         <input type="checkbox" name="hobby" value="music"> ฟังเพลง
     <br><br>
+
         <label>User&nbsp;:&nbsp;</label>
         <input type="text" name="user">
-        <br>br
+        <br><br>
     <button type="submit"> บันทึกข้อมูล user </button>
     </form><br><br><br>
+
     <table border='1'><!--border คือการแสดงเส้นตาราง-->
         <tr>
             <th>วงที่ชอบ</th>
         </tr>
         <tr>
-            <td colspan="2" > Purpeech </td>
+            <td colspan="2"  > Purpeech </td>
+        <tr>
             <td colspan="2" > Anatomy rabbit </td>
+        <tr>
             <td colspan="2"> Ayla's </td>
         </tr>
+        </tr>
+        </tr>
     </table>
+    <br><br>
     <footer id="contact">
-         <p><h3><a href="https://github.com/Aungkanr" target="_blank"> go to github</a></p></h3>
-         <p><h3><a href="https://www.facebook.com/awds45693?locale=th_TH" target="_blank">go to facebook</a></p></h3>
+         <h3><a href="https://github.com/Aungkanr" target="_blank"> go to github</a></h3>
+         <h3><a href="https://www.facebook.com/awds45693?locale=th_TH" target="_blank">go to facebook</a></h3>
          <!--target="_blank" คือ attribute ที่ใช้ในแท็ก <a> ของ HTML เพื่อกำหนดว่าเมื่อผู้ใช้คลิกที่ลิงก์นั้น ให้เปิดลิงก์ใน หน้าต่างใหม่ของเบราว์เซอ-->
     </footer>
 </body>

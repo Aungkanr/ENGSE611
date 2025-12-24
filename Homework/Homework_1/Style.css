@@ -1,0 +1,64 @@
+     
+     body{
+
+        background-image: url(https://i.pinimg.com/1200x/6c/72/97/6c72972ab84e36d0ace4ee7522709046.jpg);
+        color: aliceblue;
+
+     }
+     
+    #datauserheader{
+            background-color: rgb(8, 4, 65);
+            border: 2px solid rgb(26, 111, 186);
+            color: beige;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 5px 5px 5px rgb(85, 223, 236);
+    }
+
+    li{
+            width: fit-content;
+            background-color: transparent;
+            border: 2px solid rgb(26, 111, 186);
+            color: beige;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 5px 5px 5px rgb(85, 223, 236);
+
+        }
+    .datauser {
+        background-color: aqua;
+        font-size: 20px;
+        color: black;
+        width: fit-content;
+
+    }
+
+    .Homelet{
+        background-color: aqua;
+        font-size: 20px;
+        color: black;
+        width: fit-content;
+
+    }
+    
+    button{
+        background-color: aquamarine;
+    }
+
+    nav h3{
+        width: fit-content;
+        text-align: center;
+        border: 3px solid rgb(26, 111, 186);
+        background-color: azure;
+        color: azure;
+        
+    }
+
+    footer{
+        text-align: center;
+        border: 3px solid rgb(26, 111, 186);
+        background-color: rgb(147, 255, 255);
+        color: azure;
+    }
