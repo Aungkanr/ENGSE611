@@ -3,6 +3,8 @@
 
         background-image: url(https://i.pinimg.com/1200x/6c/72/97/6c72972ab84e36d0ace4ee7522709046.jpg);
         color: aliceblue;
+        text-align: center;
+        font-family: sans-serif;
 
      }
      
@@ -14,6 +16,18 @@
             text-align: center;
             font-size: 20px;
             text-shadow: 5px 5px 5px rgb(85, 223, 236);
+    }
+
+    h1{
+        text-shadow: 5px 5px 5px rgb(85, 223, 236);
+
+    }
+
+    img{
+        
+        border: 3 solid rgb(30, 112, 183); 
+        border-radius: 15px ;
+
     }
 
     li{
@@ -62,3 +76,9 @@
         background-color: rgb(147, 255, 255);
         color: azure;
     }
+
+    th,td{
+        padding: 20px;
+        border: 3px rgb(29, 117, 205);
+    }
+    
