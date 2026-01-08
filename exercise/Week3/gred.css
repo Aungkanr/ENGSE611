@@ -1,0 +1,52 @@
+.grid-container{
+    display: grid;
+
+    /*การแบ่งคอลัมน์*/
+    grid-template-columns: 20% 80%;
+
+    /*การแบ่งแถว*/
+    grid-template-rows: 70px 530px 70px;
+
+    gap: 10px;
+    padding: 10px;
+    background-color: #e0f7f7;
+    height: 100vh;
+    box-sizing: border-box;
+    
+}
+
+/*Header*/
+header{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    background-color: blanchedalmond;
+    color: white; text-align: center; line-height: 70px; font-size: 24px;
+}
+
+/*ส่วน sidebar*/
+aside{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: blanchedalmond;
+    color: white; 
+    text-align: center; line-height: 530px; font-size: 24px;
+
+}
+
+/*ส่วน Main content*/
+content{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: blanchedalmond;
+    color: white; text-align: center; line-height: 530px; font-size: 24px;
+
+}
+
+/*ส่วน Main footer*/
+footer{
+    grid-row: 3/4;
+    grid-column: 1/3;
+    background-color: blanchedalmond;
+    color: white; text-align: center; line-height: 70px; font-size: 24px;
+
+}

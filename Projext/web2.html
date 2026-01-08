@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow - Knowledge Sync Console</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #ff9800;
+            --accent: #0288d1;
+            --bg: #f0f4f8;
+            --card: #ffffff;
+        }
+        body { font-family: 'Tahoma', sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
+        
+        .container { max-width: 900px; margin: 0 auto; }
+        .title { text-align: center; color: var(--primary); margin-bottom: 30px; }
+
+        /* Timeline Stepper */
+        .stepper { display: flex; justify-content: space-between; margin-bottom: 40px; position: relative; }
+        .stepper::before { content: ''; position: absolute; top: 25px; left: 0; width: 100%; height: 4px; background: #ddd; z-index: 1; }
+        .step { z-index: 2; text-align: center; width: 30%; cursor: pointer; }
+        .step-icon { width: 50px; height: 50px; background: white; border: 4px solid #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; transition: 0.3s; color: #999; }
+        .step.active .step-icon { border-color: var(--primary); color: var(--primary); transform: scale(1.2); box-shadow: 0 0 15px rgba(46, 125, 50, 0.3); }
+        .step.active span { font-weight: bold; color: var(--primary); }
+
+        /* Content Card */
+        .workflow-card { background: var(--card); border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); min-height: 400px; }
+        .scene { display: none; animation: fadeIn 0.5s ease; }
+        .scene.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Visual Elements */
+        .visual-demo { background: #f9f9f9; border: 2px dashed #ccc; border-radius: 15px; padding: 30px; margin: 20px 0; text-align: center; position: relative; }
+        .badge { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
+        .badge-admin { background: #e8f5e9; color: var(--primary); }
+        .badge-learner { background: #e3f2fd; color: var(--accent); }
+        .badge-sync { background: #fff3e0; color: var(--secondary); }
+
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .feature-item { background: #fff; padding: 10px; border-left: 4px solid var(--primary); font-size: 0.9rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+        .progress-bar { width: 100%; height: 10px; background: #eee; border-radius: 5px; margin-top: 15px; overflow: hidden; }
+        .progress-fill { width: 75%; height: 100%; background: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">
+        <h1><i class="fas fa-project-diagram"></i> Workflow อัจฉริยะ</h1>
+        <p>กระบวนการเรียนรู้แบบ Offline 100%</p>
+    </div>
+
+    <div class="stepper">
+        <div class="step active" onclick="changeStep(1)" id="s1">
+            <div class="step-icon"><i class="fas fa-user-tie"></i></div>
+            <span>1. การเตรียมเนื้อหา</span>
+        </div>
+        <div class="step" onclick="changeStep(2)" id="s2">
+            <div class="step-icon"><i class="fas fa-desktop"></i></div>
+            <span>2. การเรียนรู้หน้าเครื่อง</span>
+        </div>
+        <div class="step" onclick="changeStep(3)" id="s3">
+            <div class="step-icon"><i class="fas fa-mobile-alt"></i></div>
+            <span>3. โอนถ่ายสู่มือถือ</span>
+        </div>
+    </div>
+
+    <div class="workflow-card">
+        
+        <div id="content-1" class="scene active">
+            <span class="badge badge-admin">บทบาท: ผู้สอน (Admin)</span>
+            <h2>อัปเดตง่าย แค่ "เสียบ" แล้ว "ดึง"</h2>
+            <div class="visual-demo">
+                <i class="fas fa-usb-drive fa-4x" style="color: #666;"></i>
+                <div style="margin-top:15px;"><strong>กำลัง Auto-Sync ข้อมูล...</strong></div>
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+                <p><small><i class="fas fa-info-circle"></i> กำลังคัดลอก "คำขอเรียนรู้" จากนักเรียนลง Flash Drive</small></p>
+            </div>
+            <p><strong>หัวใจสำคัญ:</strong> ระบบ Two-way Offline Sync ช่วยให้ผู้สอนรู้ความต้องการของผู้เรียนผ่านไฟล์ที่เครื่องดึงกลับมาให้โดยอัตโนมัติ</p>
+            <div class="feature-grid">
+                <div class="feature-item"><strong>Zero Config:</strong> ไม่ต้องตั้งค่าเครือข่าย</div>
+                <div class="feature-item"><strong>Feedback Loop:</strong> ได้รับคำขอจากเด็กทันที</div>
+            </div>
+        </div>
+
+        <div id="content-2" class="scene">
+            <span class="badge badge-learner">บทบาท: ผู้เรียน (Learner)</span>
+            <h2>เรียนรู้ลื่นไหล ไม่พึ่งพาสัญญาณ</h2>
+            <div class="visual-demo" style="border-style: solid; border-color: var(--accent);">
+                <div style="display:flex; justify-content:space-around; align-items:center;">
+                    <i class="fas fa-book-reader fa-3x" style="color: var(--accent);"></i>
+                    <i class="fas fa-arrow-right"></i>
+                    <div style="text-align:left; background:white; padding:10px; border-radius:10px; border:1px solid #ddd;">
+                        <small>● บทเรียน: การตอนกิ่งไม้</small><br>
+                        <small>● สถานะ: กำลังเล่น (Offline)</small>
+                    </div>
+                </div>
+                <button style="margin-top:20px; background:var(--secondary); border:none; color:white; padding:8px 15px; border-radius:5px;">
+                    <i class="fas fa-microphone"></i> อยากเรียนอะไรเพิ่ม?
+                </button>
+            </div>
+            <p><strong>หัวใจสำคัญ:</strong> หน้าจอสัมผัสขนาด 15 นิ้วที่ตอบสนองไว (SSD Based) และปุ่มบันทึกเสียงที่ทำให้ผู้เรียนรู้สึกว่ามีส่วนร่วมในการออกแบบบทเรียน</p>
+            <div class="feature-grid">
+                <div class="feature-item"><strong>Plug & Play:</strong> เปิดปุ๊บ เรียนปั๊บ</div>
+                <div class="feature-item"><strong>SSD High Speed:</strong> วิดีโอไม่สะดุด</div>
+            </div>
+        </div>
+
+        <div id="content-3" class="scene">
+            <span class="badge badge-sync">บทบาท: การเข้าถึง (Accessibility)</span>
+            <h2>ย้ายห้องเรียนมาไว้ในมือถือ</h2>
+            <div class="visual-demo" style="background: var(--dark); color: #444;">
+                <div style="display:flex; justify-content:center; align-items:center; gap:20px;">
+                    <i class="fas fa-tablet-alt fa-3x"></i>
+                    <i class="fas fa-link fa-2x" style="color: var(--primary);"></i>
+                    <i class="fas fa-mobile-alt fa-3x"></i>
+                </div>
+                <div style="margin-top:15px; color: var(--primary);"><strong>Transferring Data via USB... 100%</strong></div>
+                <p style="font-size: 0.8rem;">ไม่ต้องใช้ Wi-Fi / ไม่ใช้ Mobile Data</p>
+            </div>
+            <p><strong>หัวใจสำคัญ:</strong> การใช้สายชาร์จเป็น "ท่อส่งความรู้" ช่วยทลายกำแพงเรื่องค่าเน็ตและการไม่มีสัญญาณในที่พักอาศัย</p>
+            <div class="feature-grid">
+                <div class="feature-item"><strong>Companion App:</strong> เปิดอ่านออฟไลน์ได้ 100%</div>
+                <div class="feature-item"><strong>Cost Zero:</strong> ประหยัดค่าเน็ตให้ครอบครัว</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function changeStep(stepNum) {
+        // Update Stepper UI
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        document.getElementById('s' + stepNum).classList.add('active');
+
+        // Update Content
+        document.querySelectorAll('.scene').forEach(c => c.classList.remove('active'));
+        document.getElementById('content-' + stepNum).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

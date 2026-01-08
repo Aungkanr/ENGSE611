@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p{
+            color : green;
+        }
+
+        .hihglight{
+            background : yellow;
+            padding: 5px;
+        }
+
+        #header{
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        p:hover{
+            color: red;
+            background: F5FFFA;
+            cursor: pointer;
+        }
+
+        input[type="txet"] {
+        border: 2px solid blue;
+        padding: 8px;
+        border-radius: 5px;
+
+        }
+
+        input[type="txet"]:focus {
+        border-color: 2px solid blue;
+        outline: none;
+        background-color: white;
+        
+        }
+
+        body{
+            font-family: Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+
+               }
+        
+        h1{
+            font-size: 40px;
+            text-shadow: 5px 5px 5px red;
+
+        }
+
+        p{
+            Width: 300px;
+            border: 1px white;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+        .Test{
+        background-color: rgb(0, 191, 255);
+        background-image: url(mem.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        
+        background:url('mem.jpg') no-repeat center / cover
+        }
+
+        .text5{
+        background-color: rgb(0, 191, 255);
+        background-image: url(mem.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+
+        .text4{
+        background-color: rgb(0, 191, 255);
+        background-repeat: no-repeat;
+        background-position: right;
+        }   
+
+
+
+        
+    </style>
+    
+    <h2>Psrudo-class :hover</h2>
+    <p>นำเมาส์มาวางบนข้อความนี้เพื่อดูเอหเฟกต์</p>
+    
+
+    <!--Element Selector-->
+    
+    <h1> ตัวอย่าง CSS Selectors</h1>
+    <p>
+        ข้อความนี้ถูกจัดสีด้วย Element Selecttors (p { colo : green})
+    </p>
+    <p>
+        ข้อความนี้ใช้ Element Selecttors ใช้ซ้ำ
+    </p>
+
+    <!--Class Selector-->
+
+    <p class = "hihglight">
+        ข้อความนี้ถูกจัดสไตล์ด้วย CLass Selectors (.hihglight)
+    </p>
+    <p class  = "Test">
+        Haloo daiyen
+    </p>
+
+    <!--ID Selector-->
+    <div id="header">
+            นี้คือพื้นที่ Hender ( ID Selectors)
+    </div>
+    <div id="header">
+            นี้คือพื้นที่ Hender2 ( ID Selectors)
+    </div>
+
+    <div >
+        <h2>Text Properties – Example</h2>
+
+        <h3>1. การจัดแนวข้อความ (text-align)</h3>
+        <p class="align-left">ข้อความนี้จัดชิดซ้าย (left)</p>
+        <p class="align-center">ข้อความนี้จัดกึ่งกลาง (center)</p>
+        <p class="align-right">ข้อความนี้จัดชิดขวา (right)</p>
+        <p class="align-justify">ข้อความนี้จัดเต็มบรรทัด (justify) เพื่อให้ชิดทั้งซ้ายและขวาโดยอัตโนมัติ (ต้องมีข้อความยาวๆ ถึงจะเห็นผลชัดเจน)</p>
+
+        <hr> <h3>2. การตกแต่งข้อความ (text-decoration)</h3>
+        <p class="deco-underline">ข้อความนี้ขีดเส้นใต้ (underline)</p>
+        <p class="deco-through">ข้อความนี้ขีดฆ่า (line-through)</p>
+        <p class="deco-none">ข้อความนี้ไม่มีการตกแต่ง (none)</p>
+
+        <hr>
+
+        <h3>3. การกำหนดระยะบรรทัด (line-height)</h3>
+        <p class="test5">
+            ระยะบรรทัด 1.5 เท่า – เหมาะสำหรับการอ่านแบบสบายตาในบทความทั่วไป 
+            (ลองใส่ข้อความยาวๆ เพื่อดูระยะห่างระหว่างบรรทัดที่สบายตาขึ้น)
+        </p>
+        <p class="test4">
+            ระยะบรรทัด 24px – ควบคุมความสูงบรรทัดแบบคงที่ 
+            (ความสูงจะถูกล็อคไว้ที่ 24 พิกเซล ไม่ว่าจะฟอนต์ใหญ่หรือเล็ก)
+        </p>
+    </div>
+</body>
+</html>

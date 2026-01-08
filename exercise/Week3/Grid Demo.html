@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container{
+    display: grid;
+
+    grid-template: 4
+    "header header" 70px
+    "side main" 530px
+    "footer footer" 70px
+    ;
+
+    gap: 10px;
+    padding: 10px;
+    background-color: #e0f7f7;
+    height: 100vh;
+    box-sizing: border-box;
+    
+}
+
+/*Header*/
+header{
+    grid-area: header;
+    background-color: rgb(4, 177, 235);
+    color: white; 
+    text-align: center; line-height: 530px; font-size: 24px;
+}
+
+/*ส่วน sidebar*/
+aside{
+    grid-area: aside;
+    background-color: blanchedalmond;
+    color: white; 
+    text-align: center; line-height: 530px; font-size: 24px;
+
+}
+
+/*ส่วน Main content*/
+content{
+    grid-area: Main;
+    background-color: blanchedalmond;
+    color: white; text-align: center; line-height: 530px; font-size: 24px;
+
+}
+
+/*ส่วน Main footer*/
+footer{
+    grid-area: footer;
+    background-color: blanchedalmond;
+    color: white; text-align: center; line-height: 70px; font-size: 24px;
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="header">1</div> 
+  <div class="header">2</div>
+  <div class="header">3</div>
+</div>
+
+<div class="aside">
+  <div class="aside">1</div> 
+  <div class="aside">2</div>
+  <div class="aside">3</div>
+</div>
+
+<div class="grid-container">
+  <div class="content">1</div> 
+  <div class="content">2</div>
+  <div class="content">3</div>
+</div>
+
+<div class="grid-container">
+  <div class="footer">1</div> 
+  <div class="footer">2</div>
+  <div class="footer">3</div>
+</div>
+
+
+
+</body>
+</html>

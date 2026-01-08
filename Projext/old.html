@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison: Old vs New</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --old-color: #78909c;
+            --new-color: #2e7d32;
+            --bg: #f8fafc;
+        }
+        body { font-family: 'Tahoma', sans-serif; background: var(--bg); padding: 40px 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { color: #333; font-size: 2rem; }
+        .header span { color: var(--new-color); font-weight: bold; }
+
+        table { width: 100%; border-collapse: separate; border-spacing: 0 15px; }
+        th { padding: 20px; text-align: left; font-size: 1.1rem; color: #666; }
+        
+        /* Table Rows */
+        .comparison-row td { background: white; padding: 25px; vertical-align: middle; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .comparison-row td:first-child { border-radius: 15px 0 0 15px; width: 30%; font-weight: bold; color: #444; border-left: 5px solid #ddd; }
+        .comparison-row td:last-child { border-radius: 0 15px 15px 0; border-left: 2px solid #f0f0f0; }
+
+        /* Icons & Labels */
+        .label-old { color: var(--old-color); display: flex; align-items: center; gap: 10px; }
+        .label-new { color: var(--new-color); display: flex; align-items: center; gap: 10px; font-weight: bold; }
+        
+        .status-icon { font-size: 1.2rem; }
+        .upgrade-arrow { color: var(--new-color); text-align: center; font-size: 1.5rem; }
+
+        /* Highlight box */
+        .highlight { background: #e8f5e9; padding: 5px 10px; border-radius: 5px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ยกระดับนวัตกรรมเพื่อการเข้าถึง <span>(Access Redefined)</span></h1>
+        <p>เปรียบเทียบประสิทธิภาพระหว่างรุ่นเดิมและรุ่นพัฒนาใหม่</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>มิติการใช้งาน</th>
+                <th>รุ่นเดิม (Legacy)</th>
+                <th>Knowledge Sync (New)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="comparison-row">
+                <td>ความยืดหยุ่นในการเรียน<br><small>(Flexibility)</small></td>
+                <td>
+                    <div class="label-old">
+                        <i class="fas fa-times-circle status-icon"></i>
+                        ต้องเรียนที่หน้า Console เท่านั้น
+                    </div>
+                </td>
+                <td>
+                    <div class="label-new">
+                        <i class="fas fa-check-circle status-icon"></i>
+                        เรียนที่เครื่อง + ต่อยอดบนมือถือได้
+                    </div>
+                    <div class="highlight" style="margin-top:10px;">ขยายเวลาเรียนรู้ได้ทุกที่ ทุกเวลา</div>
+                </td>
+            </tr>
+
+            <tr class="comparison-row">
+                <td>การจัดการข้อมูลส่วนตัว<br><small>(Personalization)</small></td>
+                <td>
+                    <div class="label-old">
+                        <i class="fas fa-times-circle status-icon"></i>
+                        ไม่มีระบบติดตามรายบุคคล
+                    </div>
+                </td>
+                <td>
+                    <div class="label-new">
+                        <i class="fas fa-check-circle status-icon"></i>
+                        ติดตามความคืบหน้าบนมือถือได้
+                    </div>
+                    <div class="highlight" style="margin-top:10px;">บันทึกจุดที่เรียนค้างไว้ได้อัตโนมัติ</div>
+                </td>
+            </tr>
+
+            <tr class="comparison-row">
+                <td>การส่ง Feedback<br><small>(Communication)</small></td>
+                <td>
+                    <div class="label-old">
+                        <i class="fas fa-times-circle status-icon"></i>
+                        ทำได้เฉพาะที่หน้าเครื่อง
+                    </div>
+                </td>
+                <td>
+                    <div class="label-new">
+                        <i class="fas fa-check-circle status-icon"></i>
+                        บันทึกคำขอผ่านมือถือได้ตลอดเวลา
+                    </div>
+                    <div

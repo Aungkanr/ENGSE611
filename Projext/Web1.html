@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Sync - Companion App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32; /* เขียวเข้ม สบายตา */
+            --secondary: #ff9800; /* ส้ม เน้นจุดสำคัญ */
+            --bg: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: #333;
+        }
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .status-card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border-left: 5px solid var(--secondary);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .menu-item:active {
+            transform: scale(0.95);
+        }
+        .menu-item i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .lesson-list {
+            margin-top: 20px;
+        }
+        .lesson-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-play {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2><i class="fas fa-sync-alt"></i> Knowledge Sync</h2>
+        <p>บทเรียนออฟไลน์ของคุณ</p>
+    </div>
+
+    <div class="container">
+        <div class="status-card">
+            <i class="fas fa-check-circle" style="color: #4caf50; font-size: 1.5rem; margin-right: 15px;"></i>
+            <div>
+                <strong>ซิงค์ข้อมูลล่าสุด:</strong><br>
+                <small>22 ธันวาคม 2025 (10:30 น.)</small>
+            </div>
+        </div>
+
+        <div class="menu-grid">
+            <a href="#" class="menu-item">
+                <i class="fas fa-book-open"></i><br>
+                <strong>วิชาของฉัน</strong>
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-star"></i><br>
+                <strong>คะแนนสะสม</strong>
+            </a>
+        </div>
+
+        <div class="lesson-list">
+            <h3>บทเรียนที่โหลดไว้</h3>
+            <div class="lesson-card">
+                <div>
+                    <strong>1. เกษตรอินทรีย์พื้นฐาน</strong><br>
+                    <small>วิดีโอ • 15 นาที</small>
+                </div>
+                <button class="btn-play">เริ่มเรียน</button>
+            </div>
+            <div class="lesson-card">
+                <div>
+                    <strong>2. ช่างซ่อมเครื่องยนต์เบื้องต้น</strong><br>
+                    <small>PDF • 5 หน้า</small>
+                </div>
+                <button class="btn-play">อ่านต่อ</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    .grid-container {
+        display: grid;
+        /* กำหนดความสูงแถว: 70px, 530px, 70px ตามภาพ */
+        grid-template-rows: 70px 530px 70px;
+        /* กำหนดความกว้างคอลัมน์: 20% และ 80% ตามภาพ */
+        grid-template-columns: 20% 80%;
+        /* วาดแผนผัง Grid */
+        grid-template-areas: 
+            "header header"
+            "side main"
+            "footer footer";
+        
+        gap: 0; /* ในภาพตัวอย่างกล่องชิดกัน (ถ้าอยากให้มีช่องว่างแก้เป็น 10px) */
+        padding: 10px;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    /* Header (สีเขียว) */
+    header {
+        grid-area: header;
+        background-color: #4A8308; /* สีเขียวตามภาพ */
+        color: white; 
+        text-align: center; 
+        line-height: 70px; /* จัดกึ่งกลางแนวตั้ง (เท่าความสูงกล่อง) */
+        font-size: 24px;
+    }
+
+    /* Sidebar (สีน้ำเงิน) */
+    aside {
+        grid-area: side;
+        background-color: #004975; /* สีน้ำเงินตามภาพ */
+        color: white; 
+        text-align: center; 
+        line-height: 530px; 
+        font-size: 24px;
+        /* เส้นสีเหลืองในภาพ (ตกแต่งเพิ่มเติม) */
+        border-right: 2px solid white; 
+    }
+
+    /* Main Content (สีม่วง) */
+    main {
+        grid-area: main;
+        background-color: #78007D; /* สีม่วงตามภาพ */
+        color: white; 
+        text-align: center; 
+        line-height: 530px; 
+        font-size: 24px;
+    }
+
+    /* Footer (สีเขียวเข้ม) */
+    footer {
+        grid-area: footer;
+        background-color: #007A54; /* สีเขียวเข้มตามภาพ */
+        color: white; 
+        text-align: center; 
+        line-height: 70px; 
+        font-size: 24px;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header>Header</header>
+        <aside>Sidebar <br> 530px</aside>
+        <main>Main Content</main>
+        <footer>Footer</footer>
+    </div>
+
+</body>
+</html>
