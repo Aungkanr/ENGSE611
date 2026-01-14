@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .maincontainer{
+            display: grid;
+            grid-template-columns: 25% 75%;
+            gap: 5px;
+            box-sizing: border-box;
+            height: 100vh;
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+
+        .grid-container{
+            display: grid;
+            gap: 15px;
+        }
+
+        .menu1 {
+            background-color: yellowgreen;
+            color: rgb(76, 0, 255);
+            padding: 25px;
+
+        }
+
+        .menu2 {
+            background-color: rgba(42, 255, 170, 0.468);
+            color: rgb(0, 0, 0);
+            padding: 25px;
+
+        }
+
+        ul{
+            padding: 15px;
+        }
+
+        li{
+            margin-bottom: 15px ;
+        }
+
+
+
+
+        @media (max-width: 600px) {
+            .main-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>ตัวอย่าง 2 เกี่ยวกับ Column Layout</h1>
+    <div class="Container">
+        <div class="menu1">
+            <h3> Menu </h3>
+            <ul>
+                <li>เกี่ยวกับ</li>
+                <li>บริการ</li>
+                <li>ติดต่อ</li>
+            </ul>
+        </div>
+        <div class="Container">
+            <div class="menu2">
+        <h2>บทนำ</h2>
+        <p>Responsive Layout</p>
+
+        <h2>สรุป</h2>
+        <p>Responsive Layout</p>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
