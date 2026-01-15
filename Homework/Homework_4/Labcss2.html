@@ -6,60 +6,53 @@
     <title>Document</title>
 
     <style>
-
-        .maincontainer{
+       
+        .Container {
             display: grid;
             grid-template-columns: 25% 75%;
             gap: 5px;
             box-sizing: border-box;
-            height: 100vh;
+            min-height: 100vh;
         }
-        h1{
+
+        h1 {
             margin-bottom: 20px;
         }
 
-        .grid-container{
-            display: grid;
-            gap: 15px;
-        }
-
         .menu1 {
-            background-color: yellowgreen;
-            color: rgb(76, 0, 255);
+            background-color: rgb(150, 232, 106);
+            color: rgb(0, 0, 0);
             padding: 25px;
-
         }
 
         .menu2 {
             background-color: rgba(42, 255, 170, 0.468);
             color: rgb(0, 0, 0);
             padding: 25px;
-
         }
 
-        ul{
+        ul {
             padding: 15px;
         }
 
-        li{
-            margin-bottom: 15px ;
+        li {
+            margin-bottom: 15px;
         }
 
-
-
-
         @media (max-width: 600px) {
-            .main-box {
+            .Container {
                 grid-template-columns: 1fr;
             }
         }
-
     </style>
+
 </head>
 
 <body>
     <h1>ตัวอย่าง 2 เกี่ยวกับ Column Layout</h1>
+
     <div class="Container">
+        
         <div class="menu1">
             <h3> Menu </h3>
             <ul>
@@ -68,15 +61,14 @@
                 <li>ติดต่อ</li>
             </ul>
         </div>
-        <div class="Container">
-            <div class="menu2">
-        <h2>บทนำ</h2>
-        <p>Responsive Layout</p>
 
-        <h2>สรุป</h2>
-        <p>Responsive Layout</p>
+        <div class="menu2">
+
+            <h2>บททดสอบ</h2>
+            <p>ลองหดหน้าจอ-ขยายหน้าจอเพื่อทดสอบ Responsive Layout ดูครับ</p>
+            
         </div>
+
     </div>
-    </div>
-    </body>
+</body>
 </html>
