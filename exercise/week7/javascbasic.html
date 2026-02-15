@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>ลองกดปุ่มดู</h1>
+    <button onclick="runDemo()">Run Code</button>
+
+    <Script>
+        function runDemo(){
+            
+            console.clear();
+            const output = [];
+
+            let StudentName = 'สมชาย' ;
+            let age = 20;
+            let isStudent = true;
+            const universtiyName = 'มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา';
+
+            output.push("ชื่อ: " + StudentName );
+            console.log("ชื่อ: " + StudentName );
+            output.push("อายุ: " + age );
+            console.log("ชื่อ: " + age );
+
+            age = 21;
+            output.push("อายุใหม่: " + age );
+            console.log("อายุใหม่: " + age );
+
+            try{
+                universtiyName = 'มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา';
+            } catch (e) {
+                output.push(" Error: " + e.message);
+                console.error(e.message);
+            }
+
+            /*document.getElementById("outputBox").textContent = output.join("\n");*/
+        }
+    </Script>
+    
+</body>
+</html>
