@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade-check</title>
+</head>
+<body>
+
+    <button onclick="runScore()">Run score</button>
+
+    <pre id="outputBox">ผลลัพธ์จะแสดงที่นี่</pre>
+
+    <Script>
+        function runScore(){
+
+            let score = Math.floor(Math.random() * 101);
+            let output = [];
+            let greade = "";
+            
+            if (score >= 80 ) {
+
+                    output.push("คะแนนที่สุ่มได้ : " + score)
+                    greade = "A";
+                    output.push("เกรด : " + greade);
+                    output.push("ผลสอบ : ผ่าน");
+
+                } else if (score >= 70) {
+
+                    output.push("คะแนนที่สุ่มได้ : " + score)
+                    greade = "B";
+                    output.push("เกรด : " + greade);
+                    output.push("ผลสอบ : ผ่าน");
+
+                } else if (score >= 60) {
+
+                    output.push("คะแนนที่สุ่มได้ : " + score)
+                    greade = "C";
+                    output.push("เกรด : " + greade);
+                    output.push("ผลสอบ : ผ่าน");
+                    
+                } else if (score >= 50) {
+
+                    output.push("คะแนนที่สุ่มได้ : " + score)
+                    greade = "D";
+                    output.push("เกรด : " + greade);
+                    output.push("ผลสอบ : ผ่าน");
+
+                } else{
+
+                    output.push("คะแนนที่สุ่มได้ : " + score)
+                    greade = "F";
+                    output.push("เกรด : " + greade);
+                    output.push("ผลสอบ : ไม่ผ่าน");
+                    
+                }
+                
+                document.getElementById("outputBox").textContent = output.join("\n");
+                
+     }
+    </Script>
+
+    
+</body>
+</html>

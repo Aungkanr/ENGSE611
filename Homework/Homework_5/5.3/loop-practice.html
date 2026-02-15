@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for Loop</title>
+</head>
+<body>
+
+<h2>ผลลัพธ์</h2>
+<button onclick="runnum()">Run number</button>
+
+    <pre id="outputBox">ผลลัพธ์จะแสดงที่นี่</pre>
+
+<script>
+    function runnum(){
+        
+    let maxNumber = 20;
+    let output = [];
+
+for (let i = 0; i <= maxNumber; i++) {
+    if (i % 2 == 0) {
+        output.push(i + " = คู่ ");
+    } else {
+        output.push(i + " = คี่ ");
+    }
+}
+
+for (let i = 0; i <= maxNumber; i += 2) {
+    output.push("นับทีละ 2 : " + i);
+}
+
+for (let i = 10; i >= 0; i--) {
+    output.push("ถอยหลัง : " + i);
+}
+        document.getElementById("outputBox").textContent = output.join("\n");
+        console.log(output.join("\n"));
+    }
+</script>
+
+</body>
+</html>
